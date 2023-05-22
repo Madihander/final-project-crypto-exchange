@@ -1,0 +1,21 @@
+/*GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;400;600;700&family=Poppins&display=swap');
+:root{
+    --header-height: 3.5rem;
+
+    /* COLORS */
+    --first-color: rgb(225, 208, 81);
+    --second-color: rgb(219, 140, 128);
+    --text-color: hsl(203,8%,98%);
+    --text-color-light:hsl(203,8%,80%);
+    --body-color: hsl(259,20%,18%);
+
+    /* TYPOGRAPH */
+    --body-font: 'Oxanium',cursive;
+    --biggest-font-size: 2.25rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+    --font-semi-bold: 600;
+    --z-fixed: 100;
+}
