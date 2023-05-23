@@ -5,8 +5,13 @@
     --header-height: 3.5rem;
 
     /* COLORS */
-    --first-color: rgb(225, 208, 81);
+
+/*    --first-color: rgb(225, 208, 81);
     --second-color: rgb(219, 140, 128);
+*/
+    --first-color: rgb(0, 255, 163);
+    --second-color: rgb(3, 225, 255);
+    --third-color: rgb(220, 31, 255);
     --text-color: hsl(203, 8%, 98%);
     --text-color-light: hsl(203, 8%, 80%);
     --body-color: hsl(259, 20%, 18%);
@@ -151,7 +156,8 @@ img {
 /*==== ACTIVE LINK ====*/
 .active-link{
     background: linear-gradient(90deg,
-    var(--second-color) 0%,
+    var(--third-color) 0%,
+    var(--second-color) 50%,
     var(--first-color) 100%);
     -webkit-background-clip: text;
     color: transparent;
@@ -198,7 +204,8 @@ img {
 
 .home__title span {
     background: linear-gradient(90deg,
-    var(--second-color) 0%,
+    var(--third-color) 0%,
+    var(--second-color) 50%,
     var(--first-color) 100%);
     -webkit-background-clip: text;
     color: transparent;
@@ -212,7 +219,8 @@ img {
 .home__button{
     display: inline-block;
     background: linear-gradient(95deg,
-    var(--second-color) 0%,
+    var(--third-color) 0%,
+    var(--second-color) 50%,
     var(--first-color) 100%);
     padding: 1rem 2rem;
     border-radius: .25rem;
@@ -233,19 +241,21 @@ img {
     display: grid;
 }
 
-.home__img-bnb{
-    width: 100px;
+.home__img-sol{
+    /*width: 100px;*/
+    width: 120px;
     justify-self: center;
 }
 
-.home__img-bnb img{
+.home__img-sol img{
     filter: drop-shadow(0px 4px 32px hsla(203, 71%, 60%, .5));
     animation: 2.5s linear 0s normal none infinite running float-bnb;
     -webkit-animation: 2.5s linear 0s normal none infinite running float-bnb;
 }
 
 .home__img-orbe{
-    width: 280px;
+    /*width: 280px;*/
+    width: 240px;
     justify-self:center;
 }
 
@@ -307,12 +317,14 @@ img {
         margin-inline: 1rem;
     }
 
-    .home__img-bnb{
-        width: 80px;
+    .home__sol-bnb{
+        /*width: 80px;*/
+        width: 100px;
     }
 
     .home__img-orbe{
-        width: 230px;
+        /*width: 230px;*/
+        width: 190px;
     }
 
     .home__data{
@@ -356,11 +368,13 @@ img {
     }
 
     .home__img-orbe{
-        width: 500px;
+        /*width: 500px;*/
+        width: 460px;
     }
 
-    .home__img-bnb{
-        width: 200px;
+    .home__img-sol{
+        /*width: 200px;*/
+        width: 220px;
     }
 
     .home__data{
