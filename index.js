@@ -39,3 +39,47 @@ const scrollHeader = () => {
                        : header.classList.remove('header-bg')
 }
 window.addEventListener('scroll', scrollHeader)
+
+
+
+// Для работы с ethereum
+let account;
+
+// Подключаем metamask кошелек
+async function requestAccount() {
+    console.log('Requesting Account...')
+    // Проверяем есть ли ethereum клиент
+    if(window.ethereum) {
+        console.log('detected')
+
+        try{
+            // получаем адрес кошелька
+            const accounts = await window.ethereum.request({
+                method: 'eth_requestAccounts',
+            });
+            account = accounts;
+            // меняем название кнопки на адрес кошелька
+            let shortAcc = accounts[0].slice(0,9);
+            shortAcc = shortAcc +'...';
+            let conWalBtn = document.getElementById('conWal');
+            conWalBtn.innerText = `Wallet: ${shortAcc}`
+        } catch (error){
+            console.log(error)
+        }
+    } else{
+        console.log('MetaMask not detected');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
