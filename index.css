@@ -14,7 +14,7 @@
     --third-color: rgb(220, 31, 255);
     --text-color: hsl(203, 8%, 98%);
     --text-color-light: hsl(203, 8%, 80%);
-    --body-color: hsl(259, 20%, 18%);
+    --body-color: rgb(43, 37, 55);
 
     /* TYPOGRAPH */
     --body-font: 'Oxanium', cursive;
