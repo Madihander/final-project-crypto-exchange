@@ -70,16 +70,3 @@ async function requestAccount() {
         console.log('MetaMask not detected');
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
