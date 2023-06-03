@@ -1,11 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;400;600;700&family=Poppins&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:'Oxanium', cursive;
 }
 
 html{
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .logo {
@@ -19,7 +22,7 @@ html{
 
 #logos {
     height: 1000px;
-  }
+}
 
 .audio {
     padding-top: 80px;
@@ -172,4 +175,3 @@ body {
     color: inherit;
     font-size: 1.4rem;
 }
-
