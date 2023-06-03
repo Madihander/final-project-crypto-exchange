@@ -1,137 +1,72 @@
+/*
+*
+АДРЕС КОНТРАКТА ПЕРВОГО ТОКЕНА
+0xA4968C08F492379DB38758d4B4b577edE4b71160
 
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;400;600;700&family=Poppins&display=swap');
-*{
-    font-family:'Oxanium', cursive;
+АДРЕС КОНТРАКТА ВТОРОГО ТОКЕНА
+0xbAC3e98EA6166eF6699Ad375B15e9599Cbf7f5CA
+
+АДРЕС КОНТРАКТА SWAP
+0x37Bc5A3d3C5d52B8894CACa9C00F533Ea1bf5fe1
+
+* * */
+
+
+function updateParagraph() {
+    let input = document.getElementById("swap-value-start").value;
+    document.getElementById("swap-value-result").textContent = input / 2;
 }
 
-.logo {
-    padding: 0;
-    width: auto;
-    height: 40%;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    background: #fff;
+function updateSecondSelect() {
+    let firstSelect = document.getElementById("firstSelect");
+    let secondSelect = document.getElementById("secondSelect");
+    if (firstSelect.value === "INT") {
+        secondSelect.value = "SIT";
+    } else if (firstSelect.value === "SIT") {
+        secondSelect.value = "INT";
+    }
 }
 
-.form-select:disabled {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-    font-weight: 700;
+function requestAccount() {
+    console.log('Requesting Account...')
+    // Проверяем есть ли ethereum клиент
+    if (window.ethereum) {
+        console.log('detected')
+        ethereum.request({method: 'eth_requestAccounts'})
+            .then(function (accounts) {
+                if (accounts.length > 0) {
+                    console.log("Выбран аккаунт: ", accounts[0]);
+                    account = accounts[0];
+                    document.getElementById('addressWallet').textContent = account;
+                } else {
+                    console.log("Аккаунт не выбран");
+                }
+            })
+            .catch(function (error) {
+                // Обработка ошибки при запросе аккаунтов
+                console.error(error);
+            });
+    }
 }
 
+$(document).ready(function() {
+    $('#swapButton').click(function() {
+        $('#swapButton').text('Swapping!');
+    });
 
-.form-select:disabled option {
-    color: black;
-    font-weight: 700;
-    font-size: 1.25rem;
-}
+    $('#swapButton').mouseover(function() {
+        console.log('Swap your Tokens')
+    });
 
-.form-select {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 1.25rem;
-}
+    $('#swap-value-start').keypress(function (){
+        $('#aggetation').text("!!! Swap more Tokens !!!")
+    })
 
-.form-select option {
-    color: black;
-    font-weight: 700;
-    font-size: 1.25rem;
-}
+    $('#swapForm').submit(function(event) {
+        event.preventDefault(); // Отменяет перезагрузку страницы
+        // Ваш код обработки формы здесь
+    });
 
-body {
-    background: rgb(43, 37, 55);
-}
+});
 
-.container {
-    background: none;
-}
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.active-link {
-    background: linear-gradient(90deg,
-    rgb(220, 31, 255) 0%,
-    rgb(3, 225, 255) 50%,
-    rgb(0, 255, 163) 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 600;
-    transition: color .4s;
-    text-decoration: none;
-}
-
-.active-link:hover {
-    color: rgb(0, 255, 163);
-}
-
-.glassEffect {
-    background: linear-gradient(150deg,
-    rgb(220, 31, 255) 10%,
-    rgb(3, 225, 255) 50%,
-    rgb(0, 255, 163) 100%);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-
-}
-
-.tokenForm h3, h4, input {
-    color: #ffff;
-}
-
-.tokenForm h3 {
-    border-bottom: 2px solid #fff;
-    border-radius: 4px;
-}
-
-.tokenForm input {
-    background: none;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #fff;
-    border-radius: 4px;
-    width: 100%;
-    font-size: 1.75rem;
-    font-weight: 500;
-    line-height: 1.2;
-    font-family: Roboto sans-serif;
-}
-
-.tokenForm input:active {
-    background: none;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #fff;
-    border-radius: 4px;
-    width: 100%;
-}
-
-.btn-swap {
-    font-weight: 600;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 1.4rem;
-}
-/*@media (min-width: 576px){*/
-/*    .col-xs-1{*/
-/*        flex: 0 0 auto;*/
-/*        width: 4.16666666%;*/
-
-/*    }*/
-/*}*/
