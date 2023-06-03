@@ -1,4 +1,9 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;400;600;700&family=Poppins&display=swap');
+*{
+    font-family:'Oxanium', cursive;
+}
+
 .logo {
     padding: 0;
     width: auto;
@@ -67,7 +72,6 @@ img {
     font-weight: 600;
     transition: color .4s;
     text-decoration: none;
-    font-size: 2rem;
 }
 
 .active-link:hover {
@@ -106,6 +110,7 @@ img {
     font-size: 1.75rem;
     font-weight: 500;
     line-height: 1.2;
+    font-family: Roboto sans-serif;
 }
 
 .tokenForm input:active {
@@ -118,9 +123,15 @@ img {
 }
 
 .btn-swap {
-    font-size: 1.5rem;
     font-weight: 600;
     color: #fff;
     border-radius: 4px;
-
+    font-size: 1.4rem;
 }
+/*@media (min-width: 576px){*/
+/*    .col-xs-1{*/
+/*        flex: 0 0 auto;*/
+/*        width: 4.16666666%;*/
+
+/*    }*/
+/*}*/
