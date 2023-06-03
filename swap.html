@@ -11,22 +11,38 @@
 
 <div class="container d-flex min-vh-100 justify-content-center flex-column">
     <div class="row p-0 d-flex justify-content-center ">
-        <div class="col-4"></div>
-        <div class="col-4 d-flex justify-content-center align-items-center">
+        <div class="col-lg-4 col-md-4 col-sm-1"></div>
+        <div class="col-lg-4 col-md-4 col-sm-10 d-flex justify-content-center align-items-center">
             <img src="../img/logoNew.svg" class="logo" alt="">
         </div>
-        <div class="col-4"></div>
+        <div class="col-lg-4 col-md-4 col-sm-1"></div>
     </div>
     <header class="row d-flex justify-content-center">
-        <div class="col-2 text-center"><a href="../index.html" class="active-link">Home</a></div>
-        <div class="col-2 text-center"><a href="swap.html" class="active-link">Swap</a></div>
-        <div class="col-2 text-center"><a href="../AboutUs/aboutus.html"class="active-link">About Us</a></div>
-        <div class="col-2 text-center"><a class="active-link" onclick="requestAccount()">Connect</a></div>
+        <div class="col-lg-2 col-md-3 col-sm-3 col-3 text-center">
+            <h2>
+                <a href="../index.html" class="active-link">Home</a>
+            </h2>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 col-3 text-center">
+            <h2>
+                <a href="swap.html" class="active-link">Swap</a>
+            </h2>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 col-3 text-center">
+            <h2>
+                <a href="../AboutUs/aboutus.html" class="active-link">About</a>
+            </h2>
+        </div>
     </header>
     <div class="row m-5">
         <div class="col-xl-2 col-lg-2 col col-md-2 col-sm-2">123</div>
         <div class="col-xl-8 col-lg-8 col col-md-8 col-sm-8 d-flex">
-            <form class="container">
+            <form id="swapForm" class="container">
+
+                <div class="col-12 text-center">
+                    <h5 id="aggetation" class="active-link"></h5>
+                </div>
+
                 <div class="row tokenForm glassEffect p-5 mb-3">
                     <div class="col-9">
                         <h4>From</h4>
@@ -54,11 +70,23 @@
                     </div>
                 </div>
                 <div class="row mt-5">
-                    <div class="col-12 d-flex justify-content-center flex-column">
+                    <div class="col-12 text-center">
                         <p id="addressWallet" class="active-link"></p>
-                        <button id="swapButton" class="glassEffect btn btn-swap" onclick="requestAccount(event)" >SWAP</button>
-                        <a class="active-link" href="Table.html">List of Transactions</a>
                     </div>
+                    <div class="col-lg-4 col-md-4 col-sm-3 col-4"></div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-4 d-flex justify-content-center flex-column">
+                        <button id="swapButton" class="pt-2 pb-2 glassEffect btn btn-swap" onclick="requestAccount()">
+                            SWAP
+                        </button>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-3 col-4"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-4 col-md-2 col-sm-1"></div>
+                    <div class="col-lg-4 col-md-8 col-sm-10 text-center ">
+                        <h4><a class="active-link" href="Table.html">List of Transactions</a></h4>
+                    </div>
+                    <div class="col-lg-4 col-md-2 col-sm-1"></div>
                 </div>
             </form>
         </div>
@@ -67,6 +95,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="swap.js"></script>
 </body>
 </html>
